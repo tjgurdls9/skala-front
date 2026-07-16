@@ -9,7 +9,7 @@
 <body>
     <div class="container">
     <h2>👤 회원가입</h2>
-    <p style="font-size: 14px; color: #555;">SKALA-FRONT 회원가입을 환영합니다.</p>
+    <p style="font-size: 20px; color: #555;">SKALA-FRONT 회원가입을 환영합니다.</p>
     <hr style="border: 0; border-top: 1px solid #ddd; margin-bottom: 20px;">
 
     <form action="signUpResult.html" method="get">
@@ -26,14 +26,17 @@
                 <input type="password" id="userPw" name="userPw" placeholder="8자 이상 입력" required>
                 <span class="required">(필수)</span>
             </div>
-            <div class="form-group">
+            <div class="form-group email-group">
                 <label for="emailId" class="title">이메일:</label>
-                <input type="text" id="emailId" name="emailId" placeholder="example"> @
-                <select name="emailDomain" id="emailDomain">
-                    <option value="direct">직접 입력</option>
-                    <option value="naver.com">naver.com</option>
-                    <option value="gmail.com">gmail.com</option>
-                </select>
+                <div class="email-input-container">
+                    <input type="text" id="emailId" name="emailId" placeholder="example">
+                    <span>@</span>
+                    <select name="emailDomain" id="emailDomain">
+                        <option value="direct">직접 입력</option>
+                        <option value="naver.com">naver.com</option>
+                        <option value="gmail.com">gmail.com</option>
+                    </select>
+                </div>    
             </div>
         </fieldset>
 
@@ -47,14 +50,17 @@
                 <label for="birthDate" class="title">생년월일:</label>
                 <input type="date" id="birthDate" name="birthDate">
             </div>
+            <!-- 1. 성별 그룹 수정 (유니폼 복구 + 100px 벨트 강제 해제) -->
             <div class="form-group">
-                <label class="title">성별:</label>
+                <label class="title" style="width: auto !important; margin-right: 15px !important;">성별:</label>
                 <label><input type="radio" name="gender" value="male" checked> 남성</label>
                 <label><input type="radio" name="gender" value="female"> 여성</label>
                 <label><input type="radio" name="gender" value="none"> 선택안함</label>
             </div>
+
+            <!-- 2. 관심 분야 그룹 수정 (유니폼 복구 + 넓게 쓰기 강제 적용) -->
             <div class="form-group">
-                <label class="title" style="display: block; margin-bottom: 5px;">관심 분야 (중복 선택 가능):</label>
+                <label class="title" style="display: block !important; width: auto !important; margin-bottom: 5px !important;">관심 분야 (중복 선택 가능):</label>
                 <label><input type="checkbox" name="interest" value="frontend"> 웹 프론트엔드 (Vue.js/HTML)</label><br>
                 <label><input type="checkbox" name="interest" value="uiux"> UI/UX 디자인 표준</label><br>
                 <label><input type="checkbox" name="interest" value="backend"> 백엔드 & 데이터베이스</label><br>
