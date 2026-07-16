@@ -4,101 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>나의 소개</title>
-    <style>
-        /* =========================================
-           1. 전체 톤앤매너 및 레이아웃
-           ========================================= */
-        body {
-            font-family: 'Apple SD Gothic Neo', 'Malgun Gothic', sans-serif;
-            color: #333333;
-            background-color: #fcfcfc;
-            max-width: 800px; /* 글을 읽기 편하게 메인 포털보다 약간 폭을 좁힘 */
-            margin: 40px auto;
-            padding: 0 20px;
-            line-height: 1.6;
-        }
-
-        /* 메인 제목 및 인사말 영역 */
-        h1 {
-            color: #2c3e50;
-            font-size: 2.2rem;
-            text-align: center;
-            margin-bottom: 10px;
-        }
-
-        body > p {
-            text-align: center;
-            color: #666666;
-            margin-bottom: 40px;
-            font-size: 1.1rem;
-        }
-
-        /* 기존의 투박한 hr(가로줄)을 부드럽게 세련된 선으로 변경 */
-        hr {
-            border: 0;
-            height: 1px;
-            background-color: #e0e0e0;
-            margin: 40px 0;
-        }
-
-        /* 서브 타이틀 디자인 */
-        h2 {
-            color: #2c3e50;
-            font-size: 1.5rem;
-            margin-bottom: 20px;
-            display: inline-block;
-            border-bottom: 3px solid #16a085; /* 청록색 포인트 밑줄 */
-            padding-bottom: 5px;
-        }
-
-        /* =========================================
-           2. 리스트 (ul, ol) 카드형 디자인
-           ========================================= */
-        ul, ol {
-            background-color: #ffffff;
-            padding: 20px 20px 20px 45px; /* 왼쪽 여백을 넉넉히 줘서 불릿(점/숫자) 공간 확보 */
-            border-radius: 8px;
-            box-shadow: 0 2px 8px rgba(0,0,0,0.05); /* 은은한 입체감 */
-            margin-bottom: 30px;
-        }
-
-        li {
-            margin-bottom: 12px;
-            font-size: 1.1rem;
-            font-weight: 500;
-        }
-
-        /* 마지막 항목은 아래 여백 제거 */
-        li:last-child {
-            margin-bottom: 0;
-        }
-
-        /* =========================================
-           3. 나를 표현하는 단어들 (dl, dt, dd)
-           ========================================= */
-        dl {
-            display: flex;
-            flex-direction: column;
-            gap: 20px; /* 각 항목 간의 시원한 간격 */
-        }
-
-        dt {
-            font-size: 1.25rem;
-            font-weight: bold;
-            color: #16a085; /* 청록색 강조 */
-            margin-bottom: 8px;
-        }
-
-        dd {
-            margin: 0; /* 브라우저 기본 여백 제거 */
-            background-color: #ffffff;
-            padding: 18px;
-            border-left: 4px solid #16a085; /* 왼쪽에 굵은 포인트 선 */
-            border-radius: 0 6px 6px 0; /* 오른쪽 모서리만 둥글게 */
-            box-shadow: 0 2px 5px rgba(0,0,0,0.05);
-            color: #555555;
-        }
-    </style>
+    <link rel="stylesheet" href="../css/style.css">
 </head>
 <body>
     <h1>👋 안녕하세요! 저를 소개합니다.</h1>
@@ -107,7 +13,7 @@
     <hr>
 
     <h2>😋 내가 좋아하는 음식</h2>
-    <ul>
+    <ul class="profile-list">
         <li>커피 ☕️</li>
         <li>고기 🍖</li>
         <li>면류 🍜</li>
