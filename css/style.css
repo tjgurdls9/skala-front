@@ -341,3 +341,27 @@ button[type="reset"] { background-color: #95a5a6; color: white; }
         flex-direction: column;
     }
 }
+
+/* =========================================
+   [미션 6] 생동감 있는 애니메이션
+========================================= */
+
+/* 2. 여행 앨범 카드 마우스 호버 효과 (살짝 떠오르며 그림자 진해짐) */
+.trip-card {
+    transition: all 0.3s ease; /* 부드러운 움직임을 위한 필수 준비물 */
+}
+
+.trip-card:hover {
+    transform: translateY(-8px);              /* 위로 8px 띄우기 */
+    box-shadow: 0 12px 20px rgba(0,0,0,0.15); /* 그림자를 더 넓고 진하게 */
+}
+
+/* 3. 첫 화면 등장 시 헤더 타이틀 페이드인 효과 */
+@keyframes fadeInDown {
+    0% { opacity: 0; transform: translateY(-20px); } /* 처음엔 투명하고 살짝 위에 있음 */
+    100% { opacity: 1; transform: translateY(0); }   /* 제자리로 오면서 선명해짐 */
+}
+
+header h1 {
+    animation: fadeInDown 1.2s ease-out forwards; /* 1.2초 동안 부드럽게 등장 */
+}
