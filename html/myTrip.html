@@ -7,41 +7,48 @@
     <link rel="stylesheet" href="../css/style.css">
 </head>
 <body>
+    <!-- 전체를 감싸는 중앙 정렬 컨테이너 -->
     <div class="container">
-    <h1>🌍 나의 여행 앨범 🎵</h1>
+        
+        <!-- 1. 여행 사진 앨범 영역 -->
+        <h1>🌍 나의 여행 앨범 🎵</h1>
 
-    <div class="trip-gallery">
-        <div class="media-item trip-card">
-            <img src="../media/jejudo.jpeg" alt="제주도 사진 영역">
-            <p class="caption">제주도 (2024년)</p>
+        <!-- 사진 갤러리 (Flexbox 3열 배치 적용) -->
+        <div class="trip-gallery">
+            <div class="media-item trip-card">
+                <img src="../media/jejudo.jpeg" alt="제주도 사진 영역">
+                <p class="caption">제주도 (2024년)</p>
+            </div>
+
+            <div class="media-item trip-card">
+                <img src="../media/mokpo.jpeg" alt="목포 사진 영역">
+                <p class="caption">목포 (2024년)</p>
+            </div>
+
+            <div class="media-item trip-card">
+                <img src="../media/seoul.jpeg" alt="서울 사진 영역">
+                <p class="caption">서울 (2025년)</p>
+            </div>
         </div>
 
-        <div class="media-item trip-card">
-            <img src="../media/mokpo.jpeg" alt="목포 사진 영역">
-            <p class="caption">목포 (2024년)</p>
+        <!-- 배경음악(BGM) 오디오 플레이어 -->
+        <div class="media-item" style="border-bottom: none;">
+            <audio controls>
+                <source src="../media/leberch-calm-lo-fi-524696.mp3" type="audio/mpeg">
+                브라우저가 오디오 태그를 지원하지 않습니다.
+            </audio>
         </div>
 
-        <div class="media-item trip-card">
-            <img src="../media/seoul.jpeg" alt="서울 사진 영역">
-            <p class="caption">서울 (2025년)</p>
+        <!-- 2. 여행 브이로그 영상 영역 -->
+        <h1>📽️ 나의 여행 브이로그</h1>
+        <div class="media-item trip-card" style="border-bottom: none; margin-bottom: 0;">
+            <video controls>
+                <source src="../media/Airplane.mp4" type="video/mp4">
+                브라우저가 비디오 태그를 지원하지 않습니다.
+            </video>
+            <p class="caption">언제나 설레는 비행 ✈️</p>
         </div>
-    </div>
-
-    <div class="media-item" style="border-bottom: none;">
-        <audio controls>
-            <source src="../media/leberch-calm-lo-fi-524696.mp3" type="audio/mpeg">
-            브라우저가 오디오 태그를 지원하지 않습니다.
-        </audio>
-    </div>
-
-    <h1>📽️ 나의 여행 브이로그</h1>
-    <div class="media-item trip-card" style="border-bottom: none; margin-bottom: 0;">
-        <video controls>
-            <source src="../media/Airplane.mp4" type="video/mp4">
-            브라우저가 비디오 태그를 지원하지 않습니다.
-        </video>
-        <p class="caption">언제나 설레는 비행 ✈️</p>
-    </div>
+        
     </div>
 </body>
 </html>
