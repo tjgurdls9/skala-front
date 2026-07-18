@@ -21,7 +21,7 @@
             <p>저의 프로필, 학습 내용, 여행 기록을 모아둔 Hub 페이지입니다.</p>
         </header>
         
-        <hr>
+        <hr style="height: 2px;">
         
         <!-- 2. 네비게이션 메뉴 (<nav>) -->
         <nav>
@@ -56,10 +56,37 @@
             <aside>
                 <h2>💡 실시간 정보</h2>
                 <p>📍현재 위치: 대한상공회의소 광주인력개발원 SKALA관</p>
-                <br>
-                <p>추천 학습 사이트:<br>
-                    <a href="https://www.w3schools.com" target="_blank">W3Schools</a>
-                </p>
+                <hr>
+                <h2>🌤️ 실시간 세계 날씨</h2>
+                <select id="city-selector" style="width: 100%; padding: 8px; margin-bottom: 10px;">
+                    <option value="">-- 도시를 선택하세요 --</option>
+                    <option value="seoul">대한민국 서울 KR</option>
+                    <option value="newyork">미국 뉴욕 US</option>
+                    <option value="tokyo">일본 도쿄 JP</option>
+                </select>
+
+                <div id="weather-box" style="
+                    border: 2px solid #16a085; 
+                    padding: 20px; 
+                    border-radius: 12px; 
+                    margin-top: 15px; 
+                    background-color: #ffffff; 
+                    box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+                    text-align: left; 
+                    line-height: 1.8;">
+                    <p style="color: #666;">도시를 선택하면 날씨 정보가 나타납니다.</p>
+                </div>
+                <hr>
+                <h2>👾 미니 자바 프로젝트</h2>
+                <button onclick="startUpDownGame()" style="width: 100%; height: 45px; background-color: #16a085; color: white; border: none; border-radius: 8px; font-weight: bold; font-size: 1.1rem; cursor: pointer; transition: 0.3s; margin-top: 10px;">
+                    🔺업다운 게임🔻
+                </button>
+                <button onclick="calculateGrade()" style="width: 100%; height: 45px; background-color: #2980b9; color: white; border: none; border-radius: 8px; font-weight: bold; font-size: 1.1rem; cursor: pointer; transition: 0.3s; margin-top: 10px;">
+                    성적 계산기 📝
+                </button>
+                <button onclick="showMyBag()" style="width: 100%; height: 45px; background-color: #8e44ad; color: white; border: none; border-radius: 8px; font-weight: bold; font-size: 1.1rem; cursor: pointer; transition: 0.3s; margin-top: 10px;">
+                    내 가방 보기 👜
+                </button>
             </aside>
 
         </div>
@@ -71,5 +98,9 @@
         </footer>
         
     </div>
+    <script src="../script/upDown.js"></script>
+    <script src="../script/grade.js"></script>
+    <script src="../script/bag.js"></script>
+    <script type="module" src="../script/realtimeInfo.js"></script>
 </body>
 </html>
